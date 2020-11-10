@@ -33,7 +33,7 @@ animations[5][0].y += animations[5][0].max_height // 2
 
 labels = [
 [Label(1980 // 2, 0, 500, "History of Troll Hunters", big_font, (0, 0, 0), "yes")],
-[Label(animations[1][0].x, animations[1][0].y + animations[1][0].max_height // 2 + 10, animations[1][0].max_width * 2, "Jim became a trollhunter when he was just a teenage boy. Jim suddenly found an amulet that gave him trollhunter powers. With his friends on his side he came on a journey to defeat the evil troll GUMGUM!!!. In his arsenal he had his sword his shield, boomerang and of course hi armor		These are the word that make him become the trollhunter		For the honor of Merlin the daylight is mine to comand", big_font, (0, 0, 0), "yes"), Label(animations[1][1].x, animations[1][1].y - animations[1][1].max_height // 2 - 20, animations[1][1].max_width, "Claire, Jim and Toby", big_font, (0, 0, 0), "yes"), Label(animations[1][2].x, 1980, 500, "Blinky and Aaargh", big_font, (0, 0, 0), "yes")],
+[Label(animations[1][0].x, animations[1][0].y + animations[1][0].max_height // 2 + 10, animations[1][0].max_width * 2, "Jim became a trollhunter when he was just a teenage boy. Jim suddenly found an amulet that gave him trollhunter powers. With his friends on his side he came on a journey to defeat the evil troll GUMGUM!!!. In his arsenal he had his sword his shield, boomerang and of course hi armor		These are the word that make him become the trollhunter		For the honor of Merlin the daylight is mine to comand", big_font, (0, 0, 0), "yes"), Label(animations[1][1].x, animations[1][1].y - animations[1][1].max_height // 2 - 20, animations[1][1].max_width, "Claire, Jim and Toby", big_font, (0, 0, 0), "yes"), Label(animations[1][2].x, animations[1][2].y - (animations[1][2].max_height // 2 + 20), 500, "Blinky and Aaargh", big_font, (0, 0, 0), "yes")],
 [Label(1980 // 2, 0, 500, "History Of 3 Below", big_font, (0, 255, 255), "yes")],
 [Label(animations[3][0].x, animations[3][0].y + animations[3][0].max_height // 2 + 5, animations[3][0].max_width, "Ajay and Krel were the children of  king and queen of planet Akaridion 5 one day an evil general Val morando wich killed  king and queen Aja and Krel  flee from the planet with their bodyguard Varvatos who is obsessed whith glorious death they lend on planet earth and disguise as foregne students and by luck they end in the same school as trollhunters", big_font, (0, 0, 0), "yes")],
 [],
@@ -43,8 +43,6 @@ labels = [
 
 labels[1][0].y += labels[1][0].height // 2
 labels[0][0].y += labels[0][0].height // 2 + 5
-labels[1][2].y -= animations[1][2].max_height + 20 + 40
-labels[1][2].y += labels[1][2].height // 2 + 5
 labels[2][0].y += labels[2][0].height // 2 + 5
 labels[3][0].y += labels[3][0].height // 2 + 5
 labels[5][0].y += labels[5][0].height // 2 + 5
