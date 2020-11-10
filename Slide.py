@@ -1,9 +1,10 @@
 from pygame import Surface, KEYDOWN, K_LEFT, K_RIGHT
+from pygame.transform import scale as scale_image
 class Slide():
 	def __init__(self, x, y, slides_num, slide_num, width, height, color, animations, labels):
 		self.x = x
 		self.y = y
-		self.canvas = Surface((width, height))
+		self.canvas = Surface((1980, 1080))
 		self.width = width
 		self.height = height
 		self.animations = animations
@@ -31,7 +32,7 @@ class Slide():
 						slide.left = False
 	def move(self, slides):
 		if self.left:
-			self.x -= 20
+			self.x -= self.width
 			for animation in self.animations:
 				animation.width = -15
 				animation.height = -15
@@ -39,9 +40,9 @@ class Slide():
 				for slide in slides:
 					slide.left = False
 				for slide in slides[self.slide_num: self.slides_num]:
-					slide.x -= 20
+					slide.x -= self.width
 		if self.right:
-			self.x += 20
+			self.x += self.width
 			for animation in self.animations:
 				animation.width = -15
 				animation.height = -15
@@ -49,11 +50,11 @@ class Slide():
 				for slide in slides:
 					slide.right = False
 				for slide in slides[self.slide_num: self.slides_num]:
-					slide.x += 20
+					slide.x += self.width
 	def draw(self, window):
 		self.canvas.fill(self.color)
 		for animation in self.animations:
 			animation.draw(self.canvas)
 		for label in self.labels:
 			label.draw(self.canvas)
-		window.blit(self.canvas, (self.x, self.y))
+		window.blit(scale_image(self.canvas, (self.width, self.height)), (self.x, self.y))
